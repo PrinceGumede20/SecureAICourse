@@ -22,3 +22,12 @@ bias = torch.randn((1, 1))
 Output = activation(torch.sum(features * weights) + bias)
 
 print(Output)
+
+## Calculate the output of this network using matrix multiplication Exercise Two
+
+mytensor1 = features.shape
+mytensor2 = weights.shape
+
+newweights =weights.view(5 , 1)
+myTensor = activation(torch.mm(features, weights.view(5 , 1)) + bias)
+print(myTensor)
